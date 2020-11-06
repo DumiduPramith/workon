@@ -1,0 +1,1 @@
+real:/mnt/d/Django/real/env/bin/activate:django real project virtual env
