@@ -1,5 +1,5 @@
 #!/bin/bash
-python3 /usr/bin/workon/module/workon.py $1 $2 $3 $4 $5
+python3 /etc/workon/module/workon.py $1 $2 $3 $4 $5
 function identifier()
 {
     if [ ${line:0:1} == '#' ]
