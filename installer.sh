@@ -25,7 +25,7 @@ function main(){
     dir=$(pwd)
     python3 $dir/installer.py
     python3 /etc/workon/module/database_create.py
-    
+    chown -R ugo+rwx /etc/workon    
 }
 
 if [ $(whoami) == 'root' ]
