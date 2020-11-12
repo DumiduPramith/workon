@@ -1,4 +1,4 @@
-from module import connection
+from database import connection
 
 def create_table():
     condition=False
