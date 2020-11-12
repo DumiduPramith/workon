@@ -22,7 +22,7 @@ function main(){
     check_pkg
     download_zip
     mkdir /usr/bin/workon
-    dir=pwd
+    dir=$(pwd)
     python3 $dir/installer.py
     python3 /user/bin/workon/module/database_create.py
     
