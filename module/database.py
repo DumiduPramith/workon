@@ -10,7 +10,7 @@ path_length=0
 description_length=0
 
 def connection(quary,condition=True):
-    conn = sqlite3.connect('/etc/workon/workon.db'))
+    conn = sqlite3.connect('/etc/workon/workon.db')
     c = conn.cursor()
     c.execute(quary)
     if condition:
