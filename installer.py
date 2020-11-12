@@ -16,7 +16,7 @@ def extract_zip():
         os._exit(1)
 def main():
     p1= subprocess.run(['/bin/bash', '-i', '-c', 'workon'],capture_output=True, text=True)
-    if p1.returncode == 127:
+    if p1.returncode == 127 or p1.returncode == 1:
         try:            
             os.system("""echo "alias workon='source /usr/bin/workon/workon.sh'" >> /etc/bash.bashrc""")
         except:
