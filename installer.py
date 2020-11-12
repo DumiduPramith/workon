@@ -8,7 +8,8 @@ def extract_zip():
             for zip_info in zip.infolist():
     	        if zip_info.filename[-1] == '/':
     		        continue
-    	        zip_info.filename = os.path.basename(zip_info.filename)
+    	        elif zip_info.filename.startswith('workon-main/'):
+    		        zip_info.filename = zip_info.filename.replace('workon-main/','')
     	        zip.extract(zip_info,target_dir)
         print("Files Extract Successfuly")
     else:
