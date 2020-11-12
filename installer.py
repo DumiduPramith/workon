@@ -19,7 +19,7 @@ def main():
     p1= subprocess.run(['/bin/bash', '-i', '-c', 'workon'],capture_output=True, text=True)
     if p1.returncode == 127 or p1.returncode == 1:
         try:            
-            os.system("""echo "alias workon='source /usr/bin/workon/workon.sh'" >> /etc/bash.bashrc""")
+            os.system("""echo "alias workon='source /etc/workon/workon.sh'" >> /etc/bash.bashrc""")
         except:
             print('alias add failed')
             os._exit(1)
