@@ -1,3 +1,4 @@
 django:/mnt/d/Django:full django file
 real:/mnt/d/Django/real:django real project
 bash:/mnt/d/bash:bash script coding file
+pyworkon:/mnt/d/Python/workon:python workon directry
