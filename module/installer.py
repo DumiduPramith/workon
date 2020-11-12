@@ -1,8 +1,8 @@
 import os, zipfile, subprocess
 
 def extract_zip():
-    dir = '/usr/bin/main.zip'
-    target_dir = '/usr/bin/workon'
+    dir = '/etc/main.zip'
+    target_dir = '/etc/workon'
     if os.path.isfile(dir):
         with zipfile.ZipFile(dir,"r") as zip_ref:
             zip_ref.extractall(target_dir)
@@ -13,7 +13,7 @@ def main():
     p1= subprocess.run(['/bin/bash', '-i', '-c', 'workon'],capture_output=True, text=True)
     if p1.returncode == 127:
         try:            
-            os.system("""echo "alias workon='source /usr/bin/workon/workon.sh'" >> ~/.bashrc""")
+            os.system("""echo "alias workon='source /usr/bin/workon/workon.sh'" >> /etc/bash.bashrc""")
         except:
             print('alias add failed')
             os._exit(1)

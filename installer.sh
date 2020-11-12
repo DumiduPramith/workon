@@ -15,16 +15,16 @@ function check_pkg(){
 }
 
 function download_zip(){
-    curl -L -o /usr/bin/main.zip https://github.com/DumiduPramith/workon/archive/main.zip
+    curl -L -o /etc/main.zip https://github.com/DumiduPramith/workon/archive/main.zip
 }
 
 function main(){
     check_pkg
     download_zip
-    mkdir /usr/bin/workon
+    mkdir /etc/workon
     dir=$(pwd)
     python3 $dir/installer.py
-    python3 /user/bin/workon/module/database_create.py
+    python3 /etc/workon/module/database_create.py
     
 }
 

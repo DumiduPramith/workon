@@ -32,11 +32,11 @@ function activatevenv()
     source $templine_venv
 }
 
-file=/usr/bin/workon/temp.txt
+file=/etc/workon/temp.txt
 if [[ -f "$file" ]]
 then
     while read line; do
         identifier line
-    done <<<$(cat /usr/bin/workon/temp.txt)
-    rm /usr/bin/workon/temp.txt
+    done <<<$(cat /etc/workon/temp.txt)
+    rm /etc/workon/temp.txt
 fi
