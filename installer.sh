@@ -21,8 +21,10 @@ function download_zip(){
 function main(){
     check_pkg
     download_zip
-    mkdir ~/workon
-    python3 ~/installer.py
+    mkdir /usr/bin/workon
+    dir=pwd
+    python3 $dir/installer.py
+    python3 /user/bin/workon/module/database_create.py
     
 }
 

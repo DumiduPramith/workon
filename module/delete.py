@@ -1,5 +1,6 @@
 from database import connection, Database
 import os
+
 def delete_entry(table):
     Database.get_list(table)
     print("Which {} Do you Want Delete? Enter Workon Name".format(table))

@@ -1,5 +1,5 @@
 #!/bin/bash
-python3 ~workon/module/workon.py $1 $2 $3 $4 $5
+python3 /usr/bin/workon/module/workon.py $1 $2 $3 $4 $5
 function identifier()
 {
     if [ ${line:0:1} == '#' ]
@@ -32,11 +32,11 @@ function activatevenv()
     source $templine_venv
 }
 
-file=~/temp.txt
+file=/usr/bin/workon/temp.txt
 if [[ -f "$file" ]]
 then
     while read line; do
         identifier line
-    done <<<$(cat ~/temp.txt)
-    rm ~/temp.txt
+    done <<<$(cat /usr/bin/workon/temp.txt)
+    rm /usr/bin/workon/temp.txt
 fi
