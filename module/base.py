@@ -1,7 +1,6 @@
 import sys
 import os
 from database import Database
-from print import print_header
 from workon_adder import add_path
 from delete import delete_entry
 from manual import arg_dict

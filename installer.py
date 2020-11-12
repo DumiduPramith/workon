@@ -27,6 +27,10 @@ def main():
         print("Workon Name Already Exist")
         os._exit(1)
     extract_zip()
+    print('============================')
+    print('Successfuly Installed')
+    print('type Workon or workon man')
+    print('============================')
 
 
 if __name__ == '__main__':
