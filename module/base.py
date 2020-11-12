@@ -5,7 +5,7 @@ from print import print_header
 from workon_adder import add_path
 from delete import delete_entry
 from manual import arg_dict
-BASE_DIR= os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR= os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # err= 'Error Occurred Contact Developer'
 
 class Arguments():

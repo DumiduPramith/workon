@@ -12,7 +12,9 @@ def signal_handler(sig, frame):
 
 def main():
     signal.signal(signal.SIGINT, signal_handler)
-    if sys.argv[1] == 'man' and len(sys.argv) == 2:
+    if len(sys.argv) == 1:
+        print('Workon version 1.0')
+    elif sys.argv[1] == 'man' and len(sys.argv) == 2:
         man()
         os._exit(1)
     Arguments.limit_argumeent() #limit workon and -

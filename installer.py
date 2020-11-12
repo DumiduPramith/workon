@@ -1,4 +1,4 @@
-from database import Database, connection
+from module.database import Database, connection
 import os, zipfile, subprocess
 
 def create_table():

@@ -1,8 +1,10 @@
 import sqlite3
-import os
-from make_table import main
+import os, sys
+if __name__ == 'module.database':
+    from module.make_table import main
+else:
+    from make_table import main
 BASE_DIR= os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# err= 'Error Occurred Contact Developer'
 name_length=0
 path_length=0
 description_length=0
@@ -55,4 +57,3 @@ class Database:
             return False
         else:
             return True
-# Database.get_path_list()
