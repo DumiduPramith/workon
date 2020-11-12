@@ -1,5 +1,5 @@
 import os
-# data=[('name','path','description','number'),('dumidu','withi','stud','1'),('kasn','pinn','stud','5')]
+# data=[('name','path','description','number')]
 max_val=[]
 item_count = 0
 def convert_to_str(data):
@@ -14,7 +14,7 @@ def convert_to_str(data):
 
 def get_max_val(data):
     global max_val
-    col= len(data[1])
+    col= len(data[0])
     for loc in range(len(data)):
         if col > len(data[loc]):
             print('Wrong data')
@@ -110,6 +110,4 @@ def main(data):
     print_total_line()
     max_val = []
 
-# get_max_val()
-# print_f_line()
-# print_data(2)
+# main(data)

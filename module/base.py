@@ -129,7 +129,7 @@ class Arguments():
 
 class File():
     def write_file(msg):
-        with open('/usr/bin/workon/temp.txt','a') as tempf:
+        with open('/etc/workon/temp.txt','a') as tempf:
             tempf.write(msg+'\n')
 
 class Others:
