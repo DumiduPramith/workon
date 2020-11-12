@@ -22,7 +22,7 @@ function main(){
     check_pkg
     download_zip
     mkdir ~/workon
-    python3 ~/workon/installer.py
+    python3 ~/installer.py
     
 }
 
