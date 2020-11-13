@@ -15,4 +15,4 @@ def manual():
     for item in arg_dict:
         temp = (item, arg_dict[item])
         man_list.append(temp)
-    main(man_list)
+    main(man_list, 'Workon Manual')

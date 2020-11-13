@@ -94,12 +94,17 @@ def print_total_line():
     print(total_line)
     print(line)
 
-def main(data):
+def show_table_name(t_name):
+    print('  {}'.format(t_name))
+
+
+def main(data, tname):
     global max_val
     condition = True
     str_list=convert_to_str(data)
     # print(data)
     get_max_val(str_list)
+    show_table_name(tname)
     print_f_line()
     for tup_loc in range(len(str_list)):
         print_data(str_list,tup_loc)

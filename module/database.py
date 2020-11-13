@@ -48,7 +48,11 @@ class Database:
         list= connection(q)
         head = ('name','path','description')
         list.insert(0,head)
-        main(list)
+        if table == 'path':
+            tname = 'Path List'
+        elif table == 'venv':
+            tname = 'Virtual Env List'
+        main(list, tname)
             
     def check_exist(table,workon_name):
         q = "SELECT name FROM {} WHERE name='{}'".format(table,workon_name)
