@@ -10,6 +10,6 @@ Manager Script
 
 ==================================================================================
 
-wget https://raw.githubusercontent.com/DumiduPramith/workon/main/installer.sh; wget https://raw.githubusercontent.com/DumiduPramith/workon/main/installer.py; chmod +x installer.sh; ./installer.sh
+wget https://raw.githubusercontent.com/DumiduPramith/workon-manager/main/installer.sh; wget https://raw.githubusercontent.com/DumiduPramith/workon-manager/main/installer.py; chmod +x installer.sh; ./installer.sh
 
 ==================================================================================
