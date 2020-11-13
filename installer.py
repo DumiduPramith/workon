@@ -8,8 +8,8 @@ def extract_zip():
             for zip_info in zip.infolist():
     	        if zip_info.filename[-1] == '/':
     		        continue
-    	        elif zip_info.filename.startswith('workon-main/'):
-    		        zip_info.filename = zip_info.filename.replace('workon-main/','')
+    	        elif zip_info.filename.startswith('workon-manager-main/'):
+    		        zip_info.filename = zip_info.filename.replace('workon-manager-main/','')
     	        zip.extract(zip_info,target_dir)
         print("Files Extract Successfuly")
     else:
@@ -28,8 +28,9 @@ def main():
         os._exit(1)
     extract_zip()
     print('============================')
+    print('Thanks For Using Workon-Manager')
     print('Successfuly Installed')
-    print('type Workon or workon man')
+    print('Type Workon or workon man for help')
     print('============================')
 
 

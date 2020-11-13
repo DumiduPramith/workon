@@ -15,7 +15,7 @@ function check_pkg(){
 }
 
 function download_zip(){
-    curl -L -o /etc/main.zip https://github.com/DumiduPramith/workon/archive/main.zip
+    curl -L -o /etc/main.zip https://github.com/DumiduPramith/workon-manager/archive/main.zip
 }
 
 function main(){
