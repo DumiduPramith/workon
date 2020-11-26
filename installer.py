@@ -26,7 +26,7 @@ def delete_files():
 def main():
     p1= subprocess.run(['python3', '--version', '/dev/null'],stdout=subprocess.PIPE)
     ver = p1.stdout.decode('UTF-8').strip('\n').split(' ')[1].split('.')
-    if int(ver[1] < 6):
+    if int(ver[1]) < 6:
         try:
             subprocess.check_output(['/bin/bash', '-i', '-c', 'workon'])
             return_code = 0
