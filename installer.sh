@@ -24,7 +24,13 @@ function main(){
     mkdir /etc/workon
     dir=$(pwd)
     python3 $dir/installer.py
-    python3 /etc/workon/module/database_create.py
+    if [ $? -eq 1 ]; then
+        echo 'installer.py file error'
+        exit
+    else
+    then
+        python3 /etc/workon/module/database_create.py
+    fi
     chmod -R ugo+rwx /etc/workon
     rm -rf /etc/main.zip
 }
