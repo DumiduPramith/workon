@@ -15,37 +15,46 @@ def extract_zip():
     else:
         print('Zip File Not Found')
         os._exit(1)
+
+def delete_files():
+    # remove created file and folder in installer.sh and exit code
+    if os.path.isfile('/etc/main.zip'):
+        os.system("rm /etc/main.zip")
+    if os.path.isdir('/etc/workon'):
+        os.system('rm -rf /etc/workon')
+
 def main():
-    try:
-        p1= subprocess.run(['python3', '--version', '>/dev/null'],stdout=subprocess.PIPE)
-        ver = p1.stdout.decode('UTF-8').strip('\n').split(' ')[1].split('.')
-        if int(ver[1] < 6):
-            try:
-                subprocess.check_output(['/bin/bash', '-i', '-c', 'workon'])
-                returncode = 0
-            except subprocess.CalledProcessError:
-                returncode = 127
-        else:
+    p1= subprocess.run(['python3', '--version', '/dev/null'],stdout=subprocess.PIPE)
+    ver = p1.stdout.decode('UTF-8').strip('\n').split(' ')[1].split('.')
+    if int(ver[1] < 6):
+        try:
+            subprocess.check_output(['/bin/bash', '-i', '-c', 'workon'])
+            return_code = 0
+        except subprocess.CalledProcessError:
+            return_code = 127
+    else:
+        try:
             p1= subprocess.run(['/bin/bash', '-i', '-c', 'workon'],capture_output=True, text=True)
-            returncode = p1.returncode
-    except:
-        # remove created file and folder in installer.sh and exit code
-        if os.path.isfile('/etc/main.zip'):
-            os.system("rm /etc/main.zip")
-        if os.path.isdir('/etc/workon'):
-            os.system('rm -rf /etc/workon')
-        os._exit(1)
-    
-    if returncode == 127 or returncode == 1:
+            return_code = p1.returncode
+        except:
+            pass
+    if return_code == 127 or return_code == 1:
         try:            
             os.system("""echo "alias workon='source /etc/workon/workon.sh'" >> /etc/bash.bashrc""")
         except:
             print('alias add failed')
+            delete_files()
             os._exit(1)
     else:
         print("Workon Name Already Exist")
+        delete_files()
         os._exit(1)
-    extract_zip()
+    try:
+        extract_zip()
+    except:
+        print('zip extract error occured')
+        delete_files()
+        os._exit(1)
     print('============================')
     print('Thanks For Using Workon-Manager')
     print('Successfuly Installed')
