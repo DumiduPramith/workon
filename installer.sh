@@ -28,7 +28,6 @@ function main(){
         echo 'installer.py file error'
         exit
     else
-    then
         python3 /etc/workon/module/database_create.py
     fi
     chmod -R ugo+rwx /etc/workon
