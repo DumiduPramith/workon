@@ -7,13 +7,15 @@ from manual import arg_dict
 
 # err= 'Error Occurred Contact Developer'
 
-class Arguments():
+class Arguments:
+    @staticmethod
     def limit_argumeent(limit=3):
         if len(sys.argv) > limit:
             print('Too many Arguments')
             print('Hint: Max 2 Arguments are allowed')
             os._exit(1)
-    
+
+    @staticmethod
     def argument_chkr():
         count=1
         for arg in sys.argv[1:2]:
@@ -26,7 +28,8 @@ class Arguments():
                 cond,path=Database.get_data('path',name)
                 Arguments.check_database_condition_writef(cond,'@{}'.format(path))
                 # File.read_path_file()
-
+            
+    @staticmethod
     def arg_define(arg,position):
         Arguments.check_arg_available()
         Arguments.check_arg_support()
@@ -47,16 +50,20 @@ class Arguments():
             elif i == 'd':
                 delete_entry('path')
         return True
+    
+    @staticmethod
     def check_database_condition_writef(cond,path):
         if cond:
             File.write_file(path)
 
+    @staticmethod
     def get_name_by_position(position):
         try:
             return str(sys.argv[position])
         except:
             print('get name by position error')
 
+    @staticmethod
     def check_arg_support():
         try:
             if 'l' in sys.argv[1]:
@@ -115,6 +122,7 @@ class Arguments():
             print('input valid')
             os._exit(1)
 
+    @staticmethod
     def check_arg_available():
         if sys.argv[1]=='-':
             print('- Need Valid Argument')
@@ -127,17 +135,20 @@ class Arguments():
                 print('Not Valid Argument')
                 os._exit(1)
 
-class File():
+class File:
+    @staticmethod
     def write_file(msg):
         with open('/etc/workon/temp.txt','a') as tempf:
             tempf.write(msg+'\n')
 
 class Others:
+    @staticmethod
     def call_get_path():
         table='path'
         # main_name_space, main_path_space= Print.list_header()
         Database.get_list(table)
     
+    @staticmethod
     def call_get_venv(condition= True):
         table='venv'
         # main_name_space, main_path_space= Print.list_header(condition)

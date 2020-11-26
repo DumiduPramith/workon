@@ -1,9 +1,11 @@
 import sqlite3
 import os, sys
-if __name__ == 'module.database':
-    from module.make_table import main
-else:
-    from make_table import main
+# if __name__ == 'module.database':
+#     from module.make_table import main
+# else:
+#     from make_table import main
+
+from make_table import main
 
 name_length=0
 path_length=0
@@ -19,6 +21,7 @@ def connection(quary,condition=True):
     conn.close()
 
 class Database:
+    @staticmethod
     def insert_data(tname,name,path,description=None):
         condition= False
         q = 'INSERT INTO {} (name,path,description) VALUES ("{}","{}","{}")'.format(tname,name,path,description)
@@ -28,6 +31,7 @@ class Database:
         except:
             return False
 
+    @staticmethod
     def get_data(tname,name): # tname = Table name
         q = 'SELECT path FROM {} WHERE name="{}"'.format(tname,name)
         # print(q)
@@ -43,6 +47,7 @@ class Database:
             temp= val[0]
             return True,temp[0]
 
+    @staticmethod
     def get_list(table):
         q= 'SELECT name,path,description FROM {}'.format(table)
         list= connection(q)
@@ -53,7 +58,8 @@ class Database:
         elif table == 'venv':
             tname = 'Virtual Env List'
         main(list, tname)
-            
+
+    @staticmethod    
     def check_exist(table,workon_name):
         q = "SELECT name FROM {} WHERE name='{}'".format(table,workon_name)
         data = connection(q)

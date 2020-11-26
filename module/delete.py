@@ -9,7 +9,7 @@ def delete_entry(table):
     if status:
         q = "DELETE FROM {} WHERE name='{}'".format(table,del_name)
         try:
-            connection(q)
+            connection(q, False)
             print('{} {} Successfuly Deleted'.format(del_name,table))
         except:
             print('Error Occured')
