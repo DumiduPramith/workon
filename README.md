@@ -18,11 +18,11 @@ if [ $(whoami) == 'root' ]; then wget https://raw.githubusercontent.com/DumiduPr
 ```
 ============================================================================
 
-# For Unstall Workon-Manager
+# For Uninstall Workon-Manager
 ============================================================================
 **Copy And Paste**
 ```sh
-if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo 'please run as root'; fi
+if [ $(whoami) == 'root' ]; then bash /etc/workon/uninstaller.sh; else clear; echo 'please run as root'; fi
 ```
 ============================================================================
 **Environment mean Python Virtual Environment**
