@@ -34,4 +34,3 @@ Environment mean Python Virtual Environment
     'lv' : 'List All Virtual Environment' 
     'd' : 'Delete Path'
     'dv' : 'Delete Virtual Environments'
-============================================================================
