@@ -50,5 +50,7 @@ then
     main
 else
     echo 'Please run as root'
+    rm $dir/installer.py
+    rm --"$0"
 fi
 exit

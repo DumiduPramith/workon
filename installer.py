@@ -58,6 +58,7 @@ def main():
     print('============================')
     print('Thanks For Using Workon-Manager')
     print('Successfuly Installed')
+    print('Restart Terminal and ')
     print('Type Workon or workon man for help')
     print('============================')
 

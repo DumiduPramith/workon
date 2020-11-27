@@ -9,6 +9,7 @@ function main()
     if [[ $lin != '' ]]; then
     sed -i $lin'd' /etc/bash.bashrc
     echo 'Workon-Manager Successfully Deleted'
+    echo 'Restart the terminal'
     else echo "workon name not found"
     echo "May be already deleted"
     fi
