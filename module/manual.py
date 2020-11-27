@@ -10,9 +10,19 @@ arg_dict = {
     'dv' : 'Delete Virtual Environments'
 }
 
+manual_dict = {
+    'man' : 'list user manual (eg. workon man)',
+    'a' : 'Add new Workon Directry (eg. workon -a)',
+    'av' : 'Add new Workon Environment (ag. workon -av)',
+    'l' : 'List View All Available Directories (eg. workon -l)',
+    'lv' : 'List All Virtual Environment',
+    'd' : 'Delete Path',
+    'dv' : 'Delete Virtual Environments'
+}
+
 def manual():
     man_list = [('Argument','Description')] # manual list
-    for item in arg_dict:
-        temp = (item, arg_dict[item])
+    for item in manual_dict:
+        temp = (item, manual_dict[item])
         man_list.append(temp)
     main(man_list, 'Workon Manual')

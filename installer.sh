@@ -23,6 +23,7 @@ function main(){
     download_zip
     mkdir /etc/workon
     dir=$(pwd)
+    clear
     python3 $dir/installer.py
     if [ $? -eq 1 ]; then
         echo 'installer.py file error'
@@ -42,7 +43,7 @@ function main(){
     rm /etc/workon/installer.py
     rm /etc/workon/installer.sh
     rm $dir/installer.py
-    rm --"$0"
+    rm $dir/installer.sh
 }
 
 if [ $(whoami) == 'root' ]
