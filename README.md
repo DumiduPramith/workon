@@ -26,7 +26,7 @@ if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo
 
 # USER MANUAL
 ============================================================================
-    'Environment mean Python Virtual environment'
+    : 'Environment mean Python Virtual environment'
     'man' : list user manual (eg. workon man)
     'a' : 'Add new Workon Directry' (eg. workon -a)
     'av' : 'Add new Workon Environment' (ag. workon -av)
