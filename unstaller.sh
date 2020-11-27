@@ -1,9 +1,23 @@
 #!/bin/bash
-rm -rf /etc/workon
-lin=$(cat /etc/bash.bashrc | grep -n "workon" | cut -f1 -d:)
-if [[ $lin != '' ]]; then
-sed -i $lin'd' /etc/bash.bashrc
-else echo "workon name not found"
-echo "Something went wrong"
+function main()
+{
+    if [[ -d '/etc/workon' ]]; then
+    rm -rf /etc/workon
+    else echo 'Workon folder not found'
+    fi
+    lin=$(cat /etc/bash.bashrc | grep -n "workon" | cut -f1 -d:)
+    if [[ $lin != '' ]]; then
+    sed -i $lin'd' /etc/bash.bashrc
+    echo 'Workon-Manager Successfully Deleted'
+    else echo "workon name not found"
+    echo "May be already deleted"
+    fi
+}
+
+if [ $(whoami) == 'root' ]
+then
+    main
+else
+    echo 'Please run as root'
 fi
-echo 'Workon-Manager Successfully Deleted'
+exit
