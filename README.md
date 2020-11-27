@@ -28,10 +28,10 @@ if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo
 # USER MANUAL
 | Argument | Description |
 | ------ | ------ |
-    |man | List User Manual (eg. workon man) |
-    |a | Add New Workon Directry (eg. workon -a) |
-    |av | Add New Workon Environment (ag. workon -av) |
-    |l | List View All Available Directories (eg. workon -l) |
-    |lv | List All Virtual Environment | 
-    |d | Delete Path |
-    |dv | Delete Virtual Environments |
+|man | List User Manual (eg. workon man) |
+|a | Add New Workon Directry (eg. workon -a) |
+|av | Add New Workon Environment (ag. workon -av) |
+|l | List View All Available Directories (eg. workon -l) |
+|lv | List All Virtual Environment | 
+|d | Delete Path |
+|dv | Delete Virtual Environments |
