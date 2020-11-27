@@ -38,6 +38,7 @@ function main(){
         rm --"$0"
         exit
     fi
+    echo "Workon-Manager Created By DumiduPramith"
     chmod -R ugo+rwx /etc/workon
     rm -rf /etc/main.zip
     rm /etc/workon/installer.py
