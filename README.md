@@ -24,7 +24,7 @@ if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo
 ```
 ============================================================================
 **Environment mean Python Virtual Environment**
-============================================================================
+
 # USER MANUAL
 | Argument | Description |
 | ------ | ------ |
@@ -35,4 +35,3 @@ if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo
     |lv | List All Virtual Environment | 
     |d | Delete Path |
     |dv | Delete Virtual Environments |
-============================================================================
