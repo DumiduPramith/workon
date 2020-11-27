@@ -23,10 +23,10 @@ if [ $(whoami) == 'root' ]; then wget https://raw.githubusercontent.com/DumiduPr
 if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo 'please run as root'; fi
 
 ============================================================================
+Environment mean Python Virtual Environment
 
 # USER MANUAL
 ============================================================================
-    : 'Environment mean Python Virtual environment'
     'man' : list user manual (eg. workon man)
     'a' : 'Add new Workon Directry' (eg. workon -a)
     'av' : 'Add new Workon Environment' (ag. workon -av)
