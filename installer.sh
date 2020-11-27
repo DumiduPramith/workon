@@ -26,12 +26,23 @@ function main(){
     python3 $dir/installer.py
     if [ $? -eq 1 ]; then
         echo 'installer.py file error'
+        rm $dir/installer.py
+        rm --"$0"
         exit
-    else
-        python3 /etc/workon/module/database_create.py
+    fi
+    python3 /etc/workon/module/database_create.py
+    if [ $? -eq 1 ]; then
+        echo 'database_create.py file error'
+        rm $dir/installer.py
+        rm --"$0"
+        exit
     fi
     chmod -R ugo+rwx /etc/workon
     rm -rf /etc/main.zip
+    rm /etc/workon/installer.py
+    rm /etc/workon/installer.sh
+    rm $dir/installer.py
+    rm --"$0"
 }
 
 if [ $(whoami) == 'root' ]
