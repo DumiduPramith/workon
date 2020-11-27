@@ -12,6 +12,7 @@ Manager Script
 
 # For Install Workon-Manager
 ============================================================================
+**Copy And Paste**
 ```sh
 if [ $(whoami) == 'root' ]; then wget https://raw.githubusercontent.com/DumiduPramith/workon-manager/main/installer.sh; wget https://raw.githubusercontent.com/DumiduPramith/workon-manager/main/installer.py; chmod +x installer.sh; ./installer.sh; else clear; echo 'please run as root'; fi
 ```
@@ -19,6 +20,7 @@ if [ $(whoami) == 'root' ]; then wget https://raw.githubusercontent.com/DumiduPr
 
 # For Unstall Workon-Manager
 ============================================================================
+**Copy And Paste**
 ```sh
 if [ $(whoami) == 'root' ]; then bash /etc/workon/unstaller.sh; else clear; echo 'please run as root'; fi
 ```
