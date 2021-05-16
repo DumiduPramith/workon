@@ -39,7 +39,7 @@ def input_fun(table):
         workon_name = input(str('Enter Workon Name: '))
         if workon_name == '':
             print('Workon Name Cannot be empty')
-        elif len(workon_name) >= 10:
+        elif len(workon_name) > 10:
             print('Workon Name Max Allow 10 Characters Only')
         elif ' ' in workon_name:
             print('Workon Name Not Allowed Spaces (" ")')
